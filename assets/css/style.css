@@ -4,7 +4,7 @@ body {
 }
 
 .hide-on-small {
-  display: none !important;
+  display: none;
 }
 
 .polygon {
@@ -13,52 +13,53 @@ body {
   stroke: #fff;
   stroke-width: 1px;
   fill-rule: evenodd;
+  transition: all 0.3s;
 }
 
-.main-header {
+header[role="banner"] {
   height: 40px;
-}
-
-.main-header nav {
-  padding: 10px 15px;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-header nav .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  width: 25px;
+header[role="banner"] .mobile-menu {
+  background-color: transparent;
+  border: none;
+  width: 45px;
+  cursor: pointer;
 }
 
-.main-header nav .mobile-menu span {
+header[role="banner"] .mobile-menu img {
   width: 100%;
-  border-top: 4px solid black;
 }
 
-.main-header nav .mobile-menu span:not(:first-child) {
-  margin-top: 5px;
-}
-
-.main-header nav picture img {
+header[role="banner"] picture img {
   width: 126px;
 }
 
-.main-header nav .right-text {
+header[role="banner"] .right-text {
   font-size: 23px;
   margin: 0;
+  font-weight: bold;
 }
 
-.main-footer {
+header[role="banner"] .right-text span {
+  display: none;
+}
+
+footer[role="contentinfo"] {
   position: absolute;
   bottom: 0;
 }
 
-.main-footer .left-buttons {
+footer[role="contentinfo"] .left-buttons {
   background-color: black;
   padding: 11px;
+  cursor: pointer;
 }
 
-.main-footer .left-buttons a img {
+footer[role="contentinfo"] .left-buttons a img {
   width: 17px;
 }

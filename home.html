@@ -9,97 +9,114 @@
     </head>
     <body>
 
-        <header class="main-header">
-            <nav>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <header role="banner">
+            <button class="mobile-menu">
+                <img src="assets/images/icon-menu.png" alt="menu" />
+            </button>
 
+            <h1 role="heading">
                 <a href="#">
                     <picture>
                         <source srcset="assets/images/logo.png" media="(min-width: 768px)">
-                        <img srcset="assets/images/logo-mobile.png 2x" alt="">
+                        <img srcset="assets/images/logo-mobile.png" alt="AXA réinventons notre métier">
                     </picture>
                 </a>
+            </h1>
 
-                <p class="hide-on-small right-text">regards sur <span>2014</span></p>
-                <h1 class="right-text">2014</h1>
-            </nav>
+            <p class="right-text"><span>regards sur</span> 2014</p>
         </header>
 
-        <main class="content-page">
+        <main role="main">
             <section>
                 <picture class="home-background">
                     <source srcset="assets/images/bg-home.jpg" media="(min-width: 640px)">
-                    <img src="assets/images/bg-home-mobile.jpg" alt="">
+                    <img src="assets/images/bg-home-mobile.jpg">
                 </picture>
 
                 <section class="hide-on-small">
-                    <h1>protéger</h1>
-                    <h1>accompagner</h1>
-                    <h1>innover</h1>
+                    <h2>protéger</h2>
+                    <h2>accompagner</h2>
+                    <h2>innover</h2>
                 </section>
 
                 <section class="home-menu">
-                    <a class="menu-button" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>mot du président</p>
-                    </a>
-                    <a class="menu-button" href="#" class="hide-on-med-and-large">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>engagés pour mieux protéger</p>
-                    </a>
-                    <a class="menu-button" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>stratégie Ambition AXA</p>
-                    </a>
-                    <a class="menu-button" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>chiffres clés</p>
-                    </a>
-                    <a class="menu-button hide-on-small" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>histoires vécues</p>
-                    </a>
-                    <a class="menu-button hide-on-small" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>initiatives marquantes</p>
-                    </a>
-                    <a class="menu-button hide-on-small" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 252">
-                          <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
-                        </svg>
-                        <p>documents</p>
-                    </a>
+                    <nav>
+                        <a class="menu-button" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>mot du président</span>
+                            </p>
+                        </a>
+                        <a class="menu-button" href="#" class="hide-on-med-and-large">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>engagés pour mieux protéger</span>
+                            </p>
+                        </a>
+                        <a class="menu-button" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>stratégie Ambition AXA</span>
+                            </p>
+                        </a>
+                        <a class="menu-button" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>chiffres clés</span>
+                            </p>
+                        </a>
+                        <a class="menu-button hide-on-small" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>histoires vécues</span>
+                            </p>
+                        </a>
+                        <a class="menu-button hide-on-small" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>initiatives marquantes</span>
+                            </p>
+                        </a>
+                        <a class="menu-button hide-on-small" href="#">
+                            <svg viewBox="0 0 218 252">
+                              <path class="polygon" d="M693.985,439.15L585.613,502.011l-108.5-62.649L477,313.852,585.368,250.99l108.5,62.649Z" transform="translate(-476.5 -250.5)"/>
+                            </svg>
+                            <p>
+                                <span>documents</span>
+                            </p>
+                        </a>
+                    </nav>
                 </section>
             </section>
         </main>
 
 
-        <footer class="main-footer">
+        <footer role="contentinfo">
             <section>
-                <nav class=left-buttons>
-                    <a href="">
-                        <img src="assets/images/icon-share.png" alt="">
-                    </a>
-                    <a href="" class="hide-on-small">
-                        FR
-                    </a>
-                </nav>
+                <ul class="left-buttons">
+                    <li>
+                        <a href="">
+                            <img src="assets/images/icon-share.png" alt="partager">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="hide-on-small">
+                            FR
+                        </a>
+                    </li>
+                </ul>
             </section>
 
             <section class="hide-on-small">
@@ -115,19 +132,19 @@
                 <p>AXA sur les réseaux sociaux</p>
                 <nav>
                     <a href="#">
-                        <img src="assets/images/icon-facebook.png" alt="">
+                        <img src="assets/images/icon-facebook.png" alt="facebook">
                     </a>
                     <a href="#">
-                        <img src="assets/images/icon-twitter.png" alt="">
+                        <img src="assets/images/icon-twitter.png" alt="twitter">
                     </a>
                     <a href="#">
-                        <img src="assets/images/icon-linkedin.png" alt="">
+                        <img src="assets/images/icon-linkedin.png" alt="linkedin">
                     </a>
                     <a href="#">
-                        <img src="assets/images/icon-youtube.png" alt="">
+                        <img src="assets/images/icon-youtube.png" alt="youtube">
                     </a>
                     <a href="#">
-                        <img src="assets/images/icon-instagram.png" alt="">
+                        <img src="assets/images/icon-instagram.png" alt="instagram">
                     </a>
                 </nav>
             </section>
