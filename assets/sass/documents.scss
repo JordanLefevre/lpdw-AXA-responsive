@@ -49,25 +49,25 @@
 }
 
 /** checkbox **/
+.arrow {
+    transition: all .2s;
+}
 
-#cahier:checked + .cross {
+.checkbox:checked + label span:last-child .cross {
     visibility: visible;
 }
-#entretien:checked + .cross {
-    visibility: visible;
+.checkbox:checked + label span:first-child .arrow {
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
 }
-#groupe:checked + .cross {
-    visibility: visible;
+
+.subMenu {
+    display: none;
 }
-#strategie:checked + .cross {
-    visibility: visible;
+.checkbox:checked + ul.subMenu {
+    display: block;
 }
-#activite:checked + .cross {
-    visibility: visible;
-}
-#responsabilite:checked + .cross {
-    visibility: visible;
-}
+
 
 .checked {
     position: relative;
