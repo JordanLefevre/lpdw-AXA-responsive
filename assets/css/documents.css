@@ -1,0 +1,85 @@
+.bgGrey {
+  background-color: #F8F8F8;
+}
+
+.doc_content {
+  width: 680px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.doc_content h1 {
+  font-size: 40px;
+}
+
+.orangeLine {
+  width: 100%;
+  height: 1px;
+  background-color: #E79655;
+}
+
+.doc_list li {
+  background-color: #FFFFFF;
+  padding: 15px 0;
+  margin: 1px 0;
+}
+
+.doc_list li label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc_list li label :nth-child(1) {
+  padding: 0 10px;
+}
+
+.doc_list li label :nth-child(2) {
+  flex-grow: 1;
+}
+
+.button_link {
+  border: 1px solid #E79655;
+  color: #E79655;
+  text-decoration: none;
+  padding: 20px 15px;
+  display: inline-block;
+}
+
+/** checkbox **/
+#cahier:checked + .cross {
+  visibility: visible;
+}
+
+#entretien:checked + .cross {
+  visibility: visible;
+}
+
+#groupe:checked + .cross {
+  visibility: visible;
+}
+
+#strategie:checked + .cross {
+  visibility: visible;
+}
+
+#activite:checked + .cross {
+  visibility: visible;
+}
+
+#responsabilite:checked + .cross {
+  visibility: visible;
+}
+
+.checked {
+  position: relative;
+}
+
+.cross {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
