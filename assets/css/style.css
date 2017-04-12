@@ -24,6 +24,28 @@ ul li {
   transition: all 0.3s;
 }
 
+.cookies {
+  background-color: #103084;
+  padding: 12px 50px 12px 20px;
+  margin: 0;
+  color: white;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+.cookies:after {
+  width: 22px;
+  height: 22px;
+  content: '';
+  background-image: url("../images/icon-close.png");
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+
 header[role="banner"] {
   height: 40px;
   padding: 5px 15px;
@@ -58,16 +80,78 @@ header[role="banner"] .right-text span {
 }
 
 footer[role="contentinfo"] {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
-footer[role="contentinfo"] .left-buttons {
+footer[role="contentinfo"] section:first-child .left-buttons {
   background-color: black;
-  padding: 11px;
   cursor: pointer;
+  margin: 0;
+  width: 40px;
 }
 
-footer[role="contentinfo"] .left-buttons a img {
+footer[role="contentinfo"] section:first-child .left-buttons:hover + nav {
+  display: block;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li {
+  height: 40px;
+  position: relative;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li a {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li img {
+  width: 16px;
+  height: 18px;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons a img {
   width: 17px;
+}
+
+footer[role="contentinfo"] section:first-child nav {
+  display: none;
+  width: 100%;
+  height: 49px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-left: 41px;
+  z-index: -1;
+}
+
+footer[role="contentinfo"] section:first-child nav:hover {
+  display: block;
+}
+
+footer[role="contentinfo"] section:first-child nav .language-link {
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  padding-left: 2px;
+}
+
+footer[role="contentinfo"] section:first-child nav div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+}
+
+footer[role="contentinfo"] section:first-child nav div a {
+  height: 17px;
+  width: 18px;
+  margin: 5px 0 7px 0;
+}
+
+footer[role="contentinfo"] section:first-child nav div a img {
+  width: 100%;
+  height: 100%;
 }
