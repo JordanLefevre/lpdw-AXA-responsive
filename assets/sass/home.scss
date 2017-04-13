@@ -143,7 +143,7 @@ main[role="main"] {
     }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1024px) {
     main[role="main"] {
         height: calc(100% - 80px);
         background: url("../images/bg-home.jpg") no-repeat fixed 50% 50%;
@@ -152,16 +152,58 @@ main[role="main"] {
         > section {
             .home-menu {
                 nav {
-                    height:90%;
-                    top:0;
                     width: (758/1280 * 100%);
-                    margin: 0 auto;
 
                     .menu-button {
                         width:(220/758 * 100%);
                         height: 0;
                         padding-top: ( 220 / 758 * 100% );
 
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width:1024px) {
+    main[role="main"] {
+
+        > section {
+            .slogan {
+                padding:20px 0 0 75px;
+            }
+
+            .home-menu {
+                nav {
+                    width: (600/768 * 100%);
+
+                    .menu-button {
+                        width:(190 / 600 * 100%);
+                        height: 0;
+                        padding-top: ( 190 / 600 * 100% );
+
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    main[role="main"] {
+        > section {
+            .home-menu {
+                nav {
+                    top:0;
+
+                    .menu-button {
                         &:nth-child(1) {
                             left:auto;
                             transform:rotate(30deg);
@@ -212,7 +254,6 @@ main[role="main"] {
                         }
 
                         p {
-                            font-size: 18px;
                             transform:translate(-50%, 50%) rotate(-30deg);
                         }
                     }
