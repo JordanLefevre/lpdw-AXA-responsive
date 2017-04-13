@@ -9,24 +9,30 @@
     </head>
     <body>
 
-        <header class="main-header">
-            <nav>
-                <div class="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <section class="cookies">
+            <p>
+                En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de Cookies pour réaliser des statistiques de visites et vous proposer du contenu ciblé.
+            </p>
+            <button type="button" name="close-cookies">
+                <img src="assets/images/icon-close.png" alt="menu" />
+            </button>
+        </section>
 
+        <header role="banner">
+            <button type="button" name="toggle-menu" class="hide-on-large mobile-menu">
+                <img src="assets/images/icon-menu.png" alt="menu" />
+            </button>
+
+            <h1 role="heading">
                 <a href="#">
                     <picture>
-                        <source srcset="assets/images/logo.png" media="(min-width: 768px)">
-                        <img srcset="assets/images/logo-mobile.png 2x" alt="">
+                        <source srcset="assets/images/logo.png" media="(min-width: 640px)">
+                        <img srcset="assets/images/logo-mobile.png" alt="AXA réinventons notre métier">
                     </picture>
                 </a>
+            </h1>
 
-                <p class="hide-on-small right-text">regards sur <span>2014</span></p>
-                <h1 class="right-text">2014</h1>
-            </nav>
+            <p class="right-text"><span class="hide-on-small">regards</span><span class="hide-on-small">sur</span>2014</p>
         </header>
 
         <div class="bgGrey">
