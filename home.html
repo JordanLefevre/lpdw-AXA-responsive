@@ -18,25 +18,25 @@
         </section>
 
         <header role="banner">
-            <button type="button" name="toggle-menu" class="mobile-menu">
+            <button type="button" name="toggle-menu" class="hide-on-large mobile-menu">
                 <img src="assets/images/icon-menu.png" alt="menu" />
             </button>
 
             <h1 role="heading">
                 <a href="#">
                     <picture>
-                        <source srcset="assets/images/logo.png" media="(min-width: 768px)">
+                        <source srcset="assets/images/logo.png" media="(min-width: 640px)">
                         <img srcset="assets/images/logo-mobile.png" alt="AXA réinventons notre métier">
                     </picture>
                 </a>
             </h1>
 
-            <p class="right-text"><span>regards sur</span> 2014</p>
+            <p class="right-text"><span class="hide-on-small">regards</span><span class="hide-on-small">sur</span>2014</p>
         </header>
 
         <main role="main">
             <section>
-                <section class="hide-on-small">
+                <section class="hide-on-small slogan">
                     <h2>protéger</h2>
                     <h2>accompagner</h2>
                     <h2>innover</h2>
@@ -52,7 +52,7 @@
                                 <span>mot du président</span>
                             </p>
                         </a>
-                        <a class="menu-button" href="#" class="hide-on-med-and-large">
+                        <a class="menu-button hide-on-large" href="#">
                             <svg viewBox="0 0 320 278">
                                 <path class="polygon" d="M81.156,278.021 L1.024,139.677 L80.885,1.177 L240.877,1.021 L321.009,139.365 L241.148,277.865 L81.156,278.021 Z"/>
                             </svg>
@@ -120,7 +120,7 @@
                         </a>
                     </li>
                 </ul>
-                <nav>
+                <nav class="hide-on-large">
                     <div>
                         <a href="#">
                             <img src="assets/images/icon-facebook-mobile.png" alt="facebook" />

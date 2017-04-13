@@ -46,8 +46,8 @@ ul {
     button {
         position: absolute;
         right:0;
-        top:0;
-        transform: translate(-50%, 50%);
+        top:50%;
+        transform: translate(-50%, -50%);
         cursor:pointer;
         background: transparent;
         border:none;
@@ -74,7 +74,8 @@ header[role="banner"] {
     .mobile-menu {
         background-color: transparent;
         border:none;
-        width:45px;
+        padding:0;
+        width:25px;
         cursor:pointer;
 
         img {
@@ -89,12 +90,14 @@ header[role="banner"] {
     }
 
     .right-text {
-        font-size:23px;
+        font-size:26px;
         margin:0;
         font-weight: bold;
+        text-align: center;
 
         span {
-            display:none;
+            font-size: 7px;
+            line-height: 13px;
         }
     }
 }
@@ -102,6 +105,13 @@ header[role="banner"] {
 footer[role="contentinfo"] {
     position:fixed;
     bottom:0;
+    width:100%;
+    color:white;
+
+    a {
+        color:white;
+        text-decoration: none;
+    }
 
     section {
         &:first-child {
@@ -176,6 +186,98 @@ footer[role="contentinfo"] {
                         img {
                             width:100%;
                             height:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .hide-on-small {
+        display: block;
+    }
+
+    .hide-on-large {
+        display:none;
+    }
+
+    header[role="banner"] {
+        height:80px;
+        padding:0 35px 0 50px;
+
+        picture {
+            img {
+                width: auto;
+            }
+        }
+
+        .right-text {
+            line-height: 25px;
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    footer[role="contentinfo"] {
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 12px;
+
+        section {
+            &:first-child {
+                .left-buttons {
+                    &:hover {
+                        + nav {
+                          display:none;
+                      }
+                    }
+                }
+
+                nav {
+                    &:hover {
+                      display:none;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin-bottom:10px;
+                color:rgba(255,255,255, 0.5);
+
+                a {
+                    color:rgba(255,255,255, 0.5);
+                }
+
+                span {
+                    margin-left:17px;
+                }
+            }
+
+            &:last-child {
+                text-align: right;
+                color:rgba(255,255,255, 0.5);
+
+                p {
+                    margin:0;
+                    padding-right:10px;
+                }
+
+                nav {
+                    display:flex;
+                    align-items: baseline;
+                    margin:10px 0;
+                    padding-right:5px;
+
+                    a {
+                        padding:0 14px;
+
+                        &:not(:last-child) {
+                            border-right:1px solid rgba(255,255,255, 0.5);
                         }
                     }
                 }

@@ -47,8 +47,8 @@ ul li {
 .cookies button {
   position: absolute;
   right: 0;
-  top: 0;
-  transform: translate(-50%, 50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
   background: transparent;
   border: none;
@@ -75,7 +75,8 @@ header[role="banner"] {
 header[role="banner"] .mobile-menu {
   background-color: transparent;
   border: none;
-  width: 45px;
+  padding: 0;
+  width: 25px;
   cursor: pointer;
 }
 
@@ -88,18 +89,27 @@ header[role="banner"] picture img {
 }
 
 header[role="banner"] .right-text {
-  font-size: 23px;
+  font-size: 26px;
   margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 header[role="banner"] .right-text span {
-  display: none;
+  font-size: 7px;
+  line-height: 13px;
 }
 
 footer[role="contentinfo"] {
   position: fixed;
   bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer[role="contentinfo"] a {
+  color: white;
+  text-decoration: none;
 }
 
 footer[role="contentinfo"] section:first-child .left-buttons {
@@ -172,4 +182,68 @@ footer[role="contentinfo"] section:first-child nav div a {
 footer[role="contentinfo"] section:first-child nav div a img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .hide-on-small {
+    display: block;
+  }
+  .hide-on-large {
+    display: none;
+  }
+  header[role="banner"] {
+    height: 80px;
+    padding: 0 35px 0 50px;
+  }
+  header[role="banner"] picture img {
+    width: auto;
+  }
+  header[role="banner"] .right-text {
+    line-height: 25px;
+  }
+  header[role="banner"] .right-text span {
+    font-size: 14px;
+  }
+  footer[role="contentinfo"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 12px;
+  }
+  footer[role="contentinfo"] section:first-child .left-buttons:hover + nav {
+    display: none;
+  }
+  footer[role="contentinfo"] section:first-child nav:hover {
+    display: none;
+  }
+  footer[role="contentinfo"] section:nth-child(2) {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:nth-child(2) a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:nth-child(2) span {
+    margin-left: 17px;
+  }
+  footer[role="contentinfo"] section:last-child {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:last-child p {
+    margin: 0;
+    padding-right: 10px;
+  }
+  footer[role="contentinfo"] section:last-child nav {
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+    padding-right: 5px;
+  }
+  footer[role="contentinfo"] section:last-child nav a {
+    padding: 0 14px;
+  }
+  footer[role="contentinfo"] section:last-child nav a:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
 }
