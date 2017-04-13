@@ -130,7 +130,7 @@ main[role="main"] > section .home-menu nav .menu-button p:after {
   background-image: url("../images/icon-more.png");
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1024px) {
   main[role="main"] {
     height: calc(100% - 80px);
     background: url("../images/bg-home.jpg") no-repeat fixed 50% 50%;
@@ -138,15 +138,38 @@ main[role="main"] > section .home-menu nav .menu-button p:after {
     /* version standardisée */
   }
   main[role="main"] > section .home-menu nav {
-    height: 90%;
-    top: 0;
     width: 59.21875%;
-    margin: 0 auto;
   }
   main[role="main"] > section .home-menu nav .menu-button {
     width: 29.02375%;
     height: 0;
     padding-top: 29.02375%;
+  }
+  main[role="main"] > section .home-menu nav .menu-button p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  main[role="main"] > section .slogan {
+    padding: 20px 0 0 75px;
+  }
+  main[role="main"] > section .home-menu nav {
+    width: 78.125%;
+  }
+  main[role="main"] > section .home-menu nav .menu-button {
+    width: 31.66667%;
+    height: 0;
+    padding-top: 31.66667%;
+  }
+  main[role="main"] > section .home-menu nav .menu-button p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  main[role="main"] > section .home-menu nav {
+    top: 0;
   }
   main[role="main"] > section .home-menu nav .menu-button:nth-child(1) {
     left: auto;
@@ -182,7 +205,6 @@ main[role="main"] > section .home-menu nav .menu-button p:after {
     fill-opacity: 1;
   }
   main[role="main"] > section .home-menu nav .menu-button p {
-    font-size: 18px;
     transform: translate(-50%, 50%) rotate(-30deg);
   }
 }
