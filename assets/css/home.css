@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   overflow: hidden;
 }
@@ -6,89 +7,120 @@ body {
   margin: 0;
 }
 
-main[role="main"] .home-background {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
+main[role="main"] {
+  height: calc(100% - 50px);
+  background: url("../images/bg-home-mobile.jpg") no-repeat fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+}
+
+main[role="main"] > section {
   height: 100%;
-  z-index: -1;
 }
 
-main[role="main"] .home-background img {
+main[role="main"] > section .slogan {
+  height: 170px;
+  padding: 20px 0 0 150px;
+}
+
+main[role="main"] > section .slogan h2 {
+  color: white;
+  margin: 0;
+  font-size: 40px;
+}
+
+main[role="main"] > section .home-menu {
   height: 100%;
 }
 
-main[role="main"] .home-menu nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-main[role="main"] .home-menu nav .menu-button {
-  width: 44%;
-  text-align: center;
+main[role="main"] > section .home-menu nav {
   position: relative;
+  height: 90%;
+  top: 5%;
+  width: 87.1875%;
+  margin: 0 auto;
 }
 
-main[role="main"] .home-menu nav .menu-button:hover p:after {
+main[role="main"] > section .home-menu nav .menu-button {
+  width: 57.52688%;
+  height: 0;
+  padding-top: 49.46237%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+
+main[role="main"] > section .home-menu nav .menu-button:hover p:after {
   display: block;
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(1) {
-  transform: rotate(30deg);
+main[role="main"] > section .home-menu nav .menu-button:nth-child(1) {
+  left: 0;
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(1):hover svg .polygon {
+main[role="main"] > section .home-menu nav .menu-button:nth-child(1):hover svg .polygon {
   fill: #f0847a;
   fill-opacity: 1;
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(2) {
-  transform: rotate(30deg);
+main[role="main"] > section .home-menu nav .menu-button:nth-child(2) {
+  right: 0;
+  transform: translateY(50%);
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(2):hover svg .polygon {
+main[role="main"] > section .home-menu nav .menu-button:nth-child(2):hover svg .polygon {
   fill: #98c67f;
   fill-opacity: 1;
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(3) {
-  transform: rotate(30deg);
+main[role="main"] > section .home-menu nav .menu-button:nth-child(3) {
+  left: 0;
+  transform: translateY(100%);
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(3):hover svg .polygon {
+main[role="main"] > section .home-menu nav .menu-button:nth-child(3):hover svg .polygon {
   fill: #5a8fa6;
   fill-opacity: 1;
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(4) {
-  transform: rotate(30deg);
+main[role="main"] > section .home-menu nav .menu-button:nth-child(4) {
+  right: 0;
+  transform: translateY(150%);
 }
 
-main[role="main"] .home-menu nav .menu-button:nth-child(4):hover svg .polygon {
+main[role="main"] > section .home-menu nav .menu-button:nth-child(4):hover svg .polygon {
   fill: #fcc04b;
   fill-opacity: 1;
 }
 
-main[role="main"] .home-menu nav .menu-button p {
+main[role="main"] > section .home-menu nav .menu-button svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+main[role="main"] > section .home-menu nav .menu-button p {
   color: #fff;
   font-size: 11px;
   font-weight: bold;
   position: absolute;
   bottom: 50%;
   left: 50%;
-  transform: translate(-50%, 50%) rotate(-30deg);
+  transform: translate(-50%, 50%);
   margin: 0;
   width: 100%;
 }
 
-main[role="main"] .home-menu nav .menu-button p span {
+main[role="main"] > section .home-menu nav .menu-button p span {
   display: block;
   padding: 0 20px;
 }
 
-main[role="main"] .home-menu nav .menu-button p:after {
+main[role="main"] > section .home-menu nav .menu-button p:after {
   display: none;
   width: 22px;
   height: 22px;
@@ -96,4 +128,61 @@ main[role="main"] .home-menu nav .menu-button p:after {
   background-size: cover;
   content: '';
   background-image: url("../images/icon-more.png");
+}
+
+@media screen and (min-width: 640px) {
+  main[role="main"] {
+    height: calc(100% - 80px);
+    background: url("../images/bg-home.jpg") no-repeat fixed 50% 50%;
+    background-size: cover;
+    /* version standardisée */
+  }
+  main[role="main"] > section .home-menu nav {
+    height: 90%;
+    top: 0;
+    width: 59.21875%;
+    margin: 0 auto;
+  }
+  main[role="main"] > section .home-menu nav .menu-button {
+    width: 29.02375%;
+    height: 0;
+    padding-top: 29.02375%;
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(1) {
+    left: auto;
+    transform: rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(3) {
+    left: auto;
+    transform: translateX(86.5%) rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(4) {
+    right: auto;
+    transform: translateX(172.9%) rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(5) {
+    transform: translate(43%, 74.9%) rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(5):hover svg .polygon {
+    fill: #a69d57;
+    fill-opacity: 1;
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(6) {
+    transform: translate(129.4%, 74.9%) rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(6):hover svg .polygon {
+    fill: #98c67f;
+    fill-opacity: 1;
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(7) {
+    transform: translate(215.9%, 74.9%) rotate(30deg);
+  }
+  main[role="main"] > section .home-menu nav .menu-button:nth-child(7):hover svg .polygon {
+    fill: #e79655;
+    fill-opacity: 1;
+  }
+  main[role="main"] > section .home-menu nav .menu-button p {
+    font-size: 18px;
+    transform: translate(-50%, 50%) rotate(-30deg);
+  }
 }

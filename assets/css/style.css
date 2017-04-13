@@ -1,6 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Arial";
+  height: 100%;
 }
 
 .hide-on-small {
@@ -24,6 +29,41 @@ ul li {
   transition: all 0.3s;
 }
 
+.cookies {
+  background-color: #103084;
+  padding: 12px 50px 12px 20px;
+  position: absolute;
+  top: -100px;
+  transition: top .3s;
+}
+
+.cookies p {
+  margin: 0;
+  color: white;
+  font-size: 9px;
+  line-height: 13px;
+}
+
+.cookies button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.cookies button img {
+  width: 22px;
+  height: 22px;
+}
+
+.cookies.active {
+  position: relative;
+  top: 0;
+}
+
 header[role="banner"] {
   height: 40px;
   padding: 5px 15px;
@@ -35,7 +75,8 @@ header[role="banner"] {
 header[role="banner"] .mobile-menu {
   background-color: transparent;
   border: none;
-  width: 45px;
+  padding: 0;
+  width: 25px;
   cursor: pointer;
 }
 
@@ -48,26 +89,161 @@ header[role="banner"] picture img {
 }
 
 header[role="banner"] .right-text {
-  font-size: 23px;
+  font-size: 26px;
   margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 header[role="banner"] .right-text span {
-  display: none;
+  font-size: 7px;
+  line-height: 13px;
 }
 
 footer[role="contentinfo"] {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  width: 100%;
+  color: white;
 }
 
-footer[role="contentinfo"] .left-buttons {
+footer[role="contentinfo"] a {
+  color: white;
+  text-decoration: none;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons {
   background-color: black;
-  padding: 11px;
   cursor: pointer;
+  margin: 0;
+  width: 40px;
 }
 
-footer[role="contentinfo"] .left-buttons a img {
+footer[role="contentinfo"] section:first-child .left-buttons:hover + nav {
+  display: block;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li {
+  height: 40px;
+  position: relative;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li a {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons li img {
+  width: 16px;
+  height: 18px;
+}
+
+footer[role="contentinfo"] section:first-child .left-buttons a img {
   width: 17px;
+}
+
+footer[role="contentinfo"] section:first-child nav {
+  display: none;
+  width: 100%;
+  height: 49px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-left: 41px;
+  z-index: -1;
+}
+
+footer[role="contentinfo"] section:first-child nav:hover {
+  display: block;
+}
+
+footer[role="contentinfo"] section:first-child nav .language-link {
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  padding-left: 2px;
+}
+
+footer[role="contentinfo"] section:first-child nav div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+}
+
+footer[role="contentinfo"] section:first-child nav div a {
+  height: 17px;
+  width: 18px;
+  margin: 5px 0 7px 0;
+}
+
+footer[role="contentinfo"] section:first-child nav div a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .hide-on-small {
+    display: block;
+  }
+  .hide-on-large {
+    display: none;
+  }
+  header[role="banner"] {
+    height: 80px;
+    padding: 0 35px 0 50px;
+  }
+  header[role="banner"] picture img {
+    width: auto;
+  }
+  header[role="banner"] .right-text {
+    line-height: 25px;
+  }
+  header[role="banner"] .right-text span {
+    font-size: 14px;
+  }
+  footer[role="contentinfo"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 12px;
+  }
+  footer[role="contentinfo"] section:first-child .left-buttons:hover + nav {
+    display: none;
+  }
+  footer[role="contentinfo"] section:first-child nav:hover {
+    display: none;
+  }
+  footer[role="contentinfo"] section:nth-child(2) {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:nth-child(2) a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:nth-child(2) span {
+    margin-left: 17px;
+  }
+  footer[role="contentinfo"] section:last-child {
+    text-align: right;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  footer[role="contentinfo"] section:last-child p {
+    margin: 0;
+    padding-right: 10px;
+  }
+  footer[role="contentinfo"] section:last-child nav {
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+    padding-right: 5px;
+  }
+  footer[role="contentinfo"] section:last-child nav a {
+    padding: 0 14px;
+  }
+  footer[role="contentinfo"] section:last-child nav a:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
 }
