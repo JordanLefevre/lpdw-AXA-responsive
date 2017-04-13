@@ -33,12 +33,12 @@
             <section class="doc_content">
                 <h1>documents</h1>
 
-                <p>Rapport personnalisé</p>
-                <div class="orangeLine"></div>
+                <h2>Rapport personnalisé</h2>
+                <div class="lineSeparator"></div>
                 <p>Télécharger ci-dessous le document personnalisé à partir de l'édition papier du <b>rapport d'activité et de responsabilité d'entreprise 2014.</b></p>
 
                 <ul class="doc_list">
-                    <li>
+                    <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="cahier" hidden/>
                         <label for="cahier">
                             <span>
@@ -63,8 +63,8 @@
                             </span>
                         </label>
                     </li>
-                    <li>
-                        <input type="checkbox" class="checkbox" id="entretien" hidden/>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" id="entretien" hidden />
                         <label for="entretien">
                             <span>
                                 <svg
@@ -74,24 +74,107 @@
                                 </svg>
                             </span>
                             <span>Entretien avec Henri de Castries</span>
-                            <span class="checked">
+                            <span class="checked" onclick="selectAll()">
                                 <svg
                                  width="33px" height="40px">
-                                <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                <path class="selectAllCheckbox" id="selectAllCheckbox" fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                                  d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
                                 </svg>
                                 <svg
-                                width="21px" height="15px" class="cross">
-                               <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                width="21px" height="15px" id="cross_for_entretien" class="cross">
+                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" id="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
-                        <ul class="subMenu">
-                            <li>coucou</li>
+                        <ul class="subMenu" id="subMenu">
+                            <li>
+                                <input type="checkbox" id="metier" hidden/>
+                                <label for="metier">
+                                    <span>Notre métier</span>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="profil" hidden/>
+                                <label for="profil">
+                                    <span>Profil</span>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="faits" hidden/>
+                                <label for="faits">
+                                    <span>Faits marquants</span>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="resultats" hidden/>
+                                <label for="resultats">
+                                    <span>Résultats</span>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="gouvernance" hidden/>
+                                <label for="gouvernance">
+                                    <span>Gouvernance</span>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="groupe" hidden/>
                         <label for="groupe">
                             <span>
@@ -121,7 +204,7 @@
                             </span>
                         </label>
                     </li>
-                    <li>
+                    <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="strategie" hidden/>
                         <label for="strategie">
                             <span>
@@ -151,7 +234,7 @@
                             </span>
                         </label>
                     </li>
-                    <li>
+                    <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="activite" hidden/>
                         <label for="activite">
                             <span>
@@ -181,7 +264,7 @@
                             </span>
                         </label>
                     </li>
-                    <li>
+                    <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="responsabilite" hidden/>
                         <label for="responsabilite">
                             <span>
@@ -213,3 +296,8 @@
                 </a>
             </section>
         </div>
+
+    <script src="assets/js/script.js" charset="utf-8"></script>
+
+    </body>
+    </html>

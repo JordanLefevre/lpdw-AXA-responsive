@@ -12,30 +12,30 @@
     }
 }
 
-.orangeLine {
+.lineSeparator {
     width: 100%;
     height: 1px;
     background-color: #E79655;
 }
 
-.doc_list li {
+.doc_list > li {
     background-color: #FFFFFF;
     padding: 15px 0;
     margin: 1px 0;
 
 }
 
-.doc_list li label {
+.doc_list > .each_doc > label {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    :nth-child(1) {
+    & span:nth-child(1) > svg {
         padding: 0 10px;
     }
 
-    :nth-child(2) {
+    & span:nth-child(2) {
         flex-grow: 1;
     }
 }
@@ -53,7 +53,19 @@
     transition: all .2s;
 }
 
-.checkbox:checked + label span:last-child .cross {
+.each_doc > label > .checked svg path {
+    opacity: .6;
+}
+
+#cahier:checked + label span:last-child .cross,
+#groupe:checked + label span:last-child .cross,
+#strategie:checked + label span:last-child .cross,
+#activite:checked + label span:last-child .cross,
+#responsabilite:checked + label span:last-child .cross {
+    visibility: visible;
+}
+
+.checkbox:checked + label span:last-child .extend {
     visibility: visible;
 }
 .checkbox:checked + label span:first-child .arrow {
@@ -61,11 +73,54 @@
     transform-origin: 50% 50%;
 }
 
+.extend {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .subMenu {
     display: none;
+    padding: 20px 0;
+    background-color: rgb(248, 248, 248);
 }
-.checkbox:checked + ul.subMenu {
+
+.checkbox:checked ~ .subMenu {
     display: block;
+}
+
+.subMenu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subMenu li label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subMenu span:first-child {
+    flex-grow: 1;
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+.subMenu span:last-child {
+    padding-right: 8px;
+    opacity: .6;
+}
+
+.subMenu input:checked + label span:last-child {
+    opacity: 1;
+}
+
+.subMenu input:checked + label span .smallCross {
+    visibility: visible;
 }
 
 
@@ -75,6 +130,15 @@
 
 .cross {
     visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.smallCross {
+    visibility: hidden;
+    padding-right: 8px;
     position: absolute;
     top: 50%;
     left: 50%;
