@@ -26,6 +26,7 @@ ul li {
   stroke: #fff;
   stroke-width: 1px;
   fill-rule: evenodd;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -34,6 +35,7 @@ ul li {
   padding: 12px 50px 12px 20px;
   position: absolute;
   top: -100px;
+  -webkit-transition: top .3s;
   transition: top .3s;
 }
 
@@ -48,6 +50,7 @@ ul li {
   position: absolute;
   right: 0;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   cursor: pointer;
   background: transparent;
@@ -67,8 +70,14 @@ ul li {
 header[role="banner"] {
   height: 40px;
   padding: 5px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -129,6 +138,7 @@ footer[role="contentinfo"] section:first-child .left-buttons li {
 }
 
 footer[role="contentinfo"] section:first-child .left-buttons li a {
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -172,7 +182,11 @@ footer[role="contentinfo"] section:first-child nav .language-link {
 }
 
 footer[role="contentinfo"] section:first-child nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 200px;
 }
@@ -209,8 +223,14 @@ footer[role="contentinfo"] section:first-child nav div a img {
     font-size: 14px;
   }
   footer[role="contentinfo"] {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     font-size: 12px;
   }
@@ -242,7 +262,11 @@ footer[role="contentinfo"] section:first-child nav div a img {
     padding-right: 10px;
   }
   footer[role="contentinfo"] section:last-child nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     margin: 10px 0;
     padding-right: 5px;

@@ -27,16 +27,24 @@
 
 .doc_list > .each_doc > label {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     & span:nth-child(1) > svg {
         padding: 0 10px;
     }
 
     & span:nth-child(2) {
-        flex-grow: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
     }
 }
 
@@ -50,6 +58,7 @@
 
 /** checkbox **/
 .arrow {
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 
@@ -69,8 +78,10 @@
     visibility: visible;
 }
 .checkbox:checked + label span:first-child .arrow {
-    transform: rotate(90deg);
-    transform-origin: 50% 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
 }
 
 .extend {
@@ -78,7 +89,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .subMenu {
@@ -92,20 +104,34 @@
 }
 
 .subMenu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .subMenu li label {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .subMenu span:first-child {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding-left: 30px;
     font-size: 13px;
 }
@@ -133,7 +159,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .smallCross {
@@ -142,5 +169,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
