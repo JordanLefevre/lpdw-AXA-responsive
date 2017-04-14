@@ -8,8 +8,7 @@ body {
 
 main[role="main"] {
     height: calc(100% - 50px);
-    background: url("../images/bg-home-mobile.jpg") no-repeat fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background: url("../images/bg-home-mobile.jpg") no-repeat fixed; /* pour anciens Chrome et Safari */
     background-size: cover; /* version standardisée */
 
     > section {
@@ -65,7 +64,8 @@ main[role="main"] {
                     }
                     &:nth-child(2) {
                         right:0;
-                        transform:translateY(50%);
+                        -webkit-transform:translateY(50%);
+                                transform:translateY(50%);
 
                         &:hover {
                             svg {
@@ -78,7 +78,8 @@ main[role="main"] {
                     }
                     &:nth-child(3) {
                         left:0;
-                        transform:translateY(100%);
+                        -webkit-transform:translateY(100%);
+                                transform:translateY(100%);
 
                         &:hover {
                             svg {
@@ -91,7 +92,8 @@ main[role="main"] {
                     }
                     &:nth-child(4) {
                         right:0;
-                        transform:translateY(150%);
+                        -webkit-transform:translateY(150%);
+                                transform:translateY(150%);
 
                         &:hover {
                             svg {
@@ -118,7 +120,8 @@ main[role="main"] {
                         position:absolute;
                         bottom:50%;
                         left:50%;
-                        transform:translate(-50%, 50%);
+                        -webkit-transform:translate(-50%, 50%);
+                                transform:translate(-50%, 50%);
                         margin:0;
                         width:100%;
 
@@ -206,18 +209,22 @@ main[role="main"] {
                     .menu-button {
                         &:nth-child(1) {
                             left:auto;
-                            transform:rotate(30deg);
+                            -webkit-transform:rotate(30deg);
+                                    transform:rotate(30deg);
                         }
                         &:nth-child(3) {
                             left:auto;
-                            transform:translateX(86.5%) rotate(30deg);
+                            -webkit-transform:translateX(86.5%) rotate(30deg);
+                                    transform:translateX(86.5%) rotate(30deg);
                         }
                         &:nth-child(4) {
                             right:auto;
-                            transform:translateX(172.9%) rotate(30deg);
+                            -webkit-transform:translateX(172.9%) rotate(30deg);
+                                    transform:translateX(172.9%) rotate(30deg);
                         }
                         &:nth-child(5) {
-                            transform:translate(43%, 74.9%) rotate(30deg);
+                            -webkit-transform:translate(43%, 74.9%) rotate(30deg);
+                                    transform:translate(43%, 74.9%) rotate(30deg);
 
                             &:hover {
                                 svg {
@@ -229,7 +236,8 @@ main[role="main"] {
                             }
                         }
                         &:nth-child(6) {
-                            transform:translate(129.4%, 74.9%) rotate(30deg);
+                            -webkit-transform:translate(129.4%, 74.9%) rotate(30deg);
+                                    transform:translate(129.4%, 74.9%) rotate(30deg);
 
                             &:hover {
                                 svg {
@@ -241,7 +249,8 @@ main[role="main"] {
                             }
                         }
                         &:nth-child(7) {
-                            transform:translate(215.9%, 74.9%) rotate(30deg);
+                            -webkit-transform:translate(215.9%, 74.9%) rotate(30deg);
+                                    transform:translate(215.9%, 74.9%) rotate(30deg);
 
                             &:hover {
                                 svg {
@@ -254,7 +263,8 @@ main[role="main"] {
                         }
 
                         p {
-                            transform:translate(-50%, 50%) rotate(-30deg);
+                            -webkit-transform:translate(-50%, 50%) rotate(-30deg);
+                                    transform:translate(-50%, 50%) rotate(-30deg);
                         }
                     }
                 }

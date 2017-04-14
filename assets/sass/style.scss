@@ -26,6 +26,7 @@ ul {
     stroke: #fff;
     stroke-width: 1px;
     fill-rule: evenodd;
+    -webkit-transition:all 0.3s;
     transition: all 0.3s;
 }
 
@@ -34,6 +35,7 @@ ul {
     padding: 12px 50px 12px 20px;
     position: absolute;
     top:-100px;
+    -webkit-transition:top .3s;
     transition: top .3s;
 
     p {
@@ -47,7 +49,8 @@ ul {
         position: absolute;
         right:0;
         top:50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         cursor:pointer;
         background: transparent;
         border:none;
@@ -67,9 +70,15 @@ ul {
 header[role="banner"] {
     height:40px;
     padding:5px 15px;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     .mobile-menu {
         background-color: transparent;
@@ -132,7 +141,8 @@ footer[role="contentinfo"] {
                     position: relative;
 
                     a {
-                        transform: translate(-50%, -50%);
+                        -webkit-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
                         top: 50%;
                         left: 50%;
                         position: absolute;
@@ -145,6 +155,8 @@ footer[role="contentinfo"] {
                 }
 
                 a {
+                    z-index:5;
+
                     img {
                         width:17px;
                     }
@@ -160,7 +172,7 @@ footer[role="contentinfo"] {
                 bottom:0;
                 left:0;
                 padding-left:41px;
-                z-index: -1;
+                z-index: 1;
 
                 &:hover {
                     display: block;
@@ -174,8 +186,12 @@ footer[role="contentinfo"] {
                 }
 
                 div {
+                    display:-webkit-box;
+                    display:-ms-flexbox;
                     display:flex;
-                    justify-content: space-between;
+                    -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                            justify-content: space-between;
                     max-width:200px;
 
                     a {
@@ -223,9 +239,15 @@ footer[role="contentinfo"] {
     }
 
     footer[role="contentinfo"] {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
         font-size: 12px;
 
         section {
@@ -247,10 +269,14 @@ footer[role="contentinfo"] {
 
             &:nth-child(2) {
                 margin-bottom:10px;
-                color:rgba(255,255,255, 0.8);
+                color:rgba(255,255,255, 0.6);
 
                 a {
-                    color:rgba(255,255,255, 0.8);
+                    color:rgba(255,255,255, 0.6);
+
+                    &:hover {
+                        color:rgba(255,255,255, 1);
+                    }
                 }
 
                 span {
@@ -260,7 +286,7 @@ footer[role="contentinfo"] {
 
             &:last-child {
                 text-align: right;
-                color:rgba(255,255,255, 0.8);
+                color:rgba(255,255,255, 0.6);
 
                 p {
                     margin:0;
@@ -268,16 +294,30 @@ footer[role="contentinfo"] {
                 }
 
                 nav {
+                    display:-webkit-box;
+                    display:-ms-flexbox;
                     display:flex;
-                    align-items: baseline;
+                    -webkit-box-align: baseline;
+                        -ms-flex-align: baseline;
+                            align-items: baseline;
                     margin:10px 0;
                     padding-right:5px;
 
                     a {
                         padding:0 14px;
 
+                        img {
+                            opacity:0.8;
+                        }
+
                         &:not(:last-child) {
-                            border-right:1px solid rgba(255,255,255, 0.8);
+                            border-right:1px solid rgba(255,255,255, 0.6);
+                        }
+
+                        &:hover {
+                            img {
+                                opacity:1;
+                            }
                         }
                     }
                 }
