@@ -55,8 +55,8 @@
                                 </svg>
                             </span>
                             <span>Cahier "protéger ce qui nous est essentiel"</span>
-                            <p>1.2Mo</p>
-                            <span class="checked">
+                            <p data-size="1200">1.2Mo</p>
+                            <span class="globalState unchecked">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -67,8 +67,48 @@
                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
+                        <ul class="subMenu">
+                            <li>
+                                <input id="lorem" type="checkbox" hidden/>
+                                <label for="lorem">
+                                    <span>Lorem</span>
+                                    <p data-size="246">246Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="ipsum" type="checkbox" hidden/>
+                                <label for="ipsum">
+                                    <span>Ipsum</span>
+                                    <p data-size="176">176Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                     <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="entretien" hidden />
@@ -81,29 +121,30 @@
                                 </svg>
                             </span>
                             <span>Entretien avec Henri de Castries</span>
-                            <p>950Ko</p>
-                            <span class="checked" onclick="selectAll()">
+                            <p data-size="950">950Ko</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path class="selectAllCheckbox" id="selectAllCheckbox" fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
                                  d="M30.998,28.896 L16.017,37.912 L1.019,28.927 L1.002,10.924 L15.983,1.908 L30.981,10.894 L30.998,28.896 Z"/>
                                 </svg>
                                 <svg
-                                width="21px" height="15px" id="cross_for_entretien" class="cross">
+                                width="21px" height="15px" class="cross">
                                 <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
-                               <svg class="extend" id="extend" width="14px" height="4px">
+                               <svg class="extend" width="14px" height="4px">
                                   <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
                                  d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
                                 </svg>
                             </span>
                         </label>
-                        <ul class="subMenu" id="subMenu">
+                        <ul class="subMenu">
                             <li>
-                                <input type="checkbox" id="metier" hidden/>
+                                <input id="metier" type="checkbox" hidden/>
                                 <label for="metier">
                                     <span>Notre métier</span>
+                                    <p data-size="246">246Ko</p>
                                     <span class="checked">
                                         <svg class="polygone" width="19.5px" height="23.5px">
                                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -117,10 +158,10 @@
                                 </label>
                             </li>
                             <li>
-                                <input type="checkbox" id="profil" hidden/>
+                                <input id="profil" type="checkbox" hidden/>
                                 <label for="profil">
                                     <span>Profil</span>
-                                    <p></p>
+                                    <p data-size="176">176Ko</p>
                                     <span class="checked">
                                         <svg class="polygone" width="19.5px" height="23.5px">
                                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -134,9 +175,10 @@
                                 </label>
                             </li>
                             <li>
-                                <input type="checkbox" id="faits" hidden/>
+                                <input id="faits" type="checkbox" hidden/>
                                 <label for="faits">
                                     <span>Faits marquants</span>
+                                    <p data-size="708">708Ko</p>
                                     <span class="checked">
                                         <svg class="polygone" width="19.5px" height="23.5px">
                                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -150,9 +192,10 @@
                                 </label>
                             </li>
                             <li>
-                                <input type="checkbox" id="resultats" hidden/>
+                                <input id="resultats" type="checkbox" hidden/>
                                 <label for="resultats">
                                     <span>Résultats</span>
+                                    <p data-size="315">315Ko</p>
                                     <span class="checked">
                                         <svg class="polygone" width="19.5px" height="23.5px">
                                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -166,9 +209,10 @@
                                 </label>
                             </li>
                             <li>
-                                <input type="checkbox" id="gouvernance" hidden/>
+                                <input id="gouvernance" type="checkbox" hidden/>
                                 <label for="gouvernance">
                                     <span>Gouvernance</span>
+                                    <p data-size="415">415Ko</p>
                                     <span class="checked">
                                         <svg class="polygone" width="19.5px" height="23.5px">
                                           <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -192,15 +236,10 @@
                                 <path class="arrow" fill-rule="evenodd" fill="rgb(231, 150, 85)"
                                  d="M10.056,7.926 L7.959,10.037 L7.938,10.016 L2.996,14.983 L0.903,12.875 L5.837,7.916 L0.879,2.960 L3.000,0.838 L7.941,5.801 L7.960,5.782 L10.053,7.890 L10.037,7.906 L10.056,7.926 Z"/>
                                 </svg>
-                                <svg
-                                width="21px" height="15px" class="cross">
-                               <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                                d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
-                               </svg>
                             </span>
                             <span>Notre groupe</span>
-                            <p>1.6Mo</p>
-                            <span class="checked">
+                            <p data-size="1600">1.6Mo</p>
+                            <span class="globalState unchecked">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -211,8 +250,48 @@
                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
+                        <ul class="subMenu">
+                            <li>
+                                <input id="biscuits" type="checkbox" hidden/>
+                                <label for="biscuits">
+                                    <span>Biscuits</span>
+                                    <p data-size="137">137Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="chocolat" type="checkbox" hidden/>
+                                <label for="chocolat">
+                                    <span>Au Chocolat</span>
+                                    <p data-size="650">650Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                     <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="strategie" hidden/>
@@ -223,15 +302,10 @@
                                 <path class="arrow" fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                  d="M10.056,7.926 L7.959,10.037 L7.938,10.016 L2.996,14.983 L0.903,12.875 L5.837,7.916 L0.879,2.960 L3.000,0.838 L7.941,5.801 L7.960,5.782 L10.053,7.890 L10.037,7.906 L10.056,7.926 Z"/>
                                 </svg>
-                                <svg
-                                width="21px" height="15px" class="cross">
-                               <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                                d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
-                               </svg>
                             </span>
                             <span>Notre stratégie</span>
-                            <p>2.1Mo</p>
-                            <span class="checked">
+                            <p data-size="2100">2.1Mo</p>
+                            <span class="globalState unchecked">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -242,8 +316,48 @@
                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
+                        <ul class="subMenu">
+                            <li>
+                                <input id="the" type="checkbox" hidden/>
+                                <label for="the">
+                                    <span>Thé</span>
+                                    <p data-size="127">127Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="aulait" type="checkbox" hidden/>
+                                <label for="aulait">
+                                    <span>Au lait</span>
+                                    <p data-size="625">625Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                     <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="activite" hidden/>
@@ -254,15 +368,10 @@
                                 <path class="arrow" fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                  d="M10.056,7.926 L7.959,10.037 L7.938,10.016 L2.996,14.983 L0.903,12.875 L5.837,7.916 L0.879,2.960 L3.000,0.838 L7.941,5.801 L7.960,5.782 L10.053,7.890 L10.037,7.906 L10.056,7.926 Z"/>
                                 </svg>
-                                <svg
-                                width="21px" height="15px" class="cross">
-                               <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
-                                d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
-                               </svg>
                             </span>
                             <span>Nos activités</span>
-                            <p>3.4Mo</p>
-                            <span class="checked">
+                            <p data-size="3400">3.4Mo</p>
+                            <span class="globalState unchecked">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -273,8 +382,48 @@
                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
+                        <ul class="subMenu">
+                            <li>
+                                <input id="cafe" type="checkbox" hidden/>
+                                <label for="cafe">
+                                    <span>Café</span>
+                                    <p data-size="246">246Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="creme" type="checkbox" hidden/>
+                                <label for="creme">
+                                    <span>Crème</span>
+                                    <p data-size="176">176Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                     <li class="each_doc">
                         <input type="checkbox" class="checkbox" id="responsabilite" hidden/>
@@ -287,8 +436,8 @@
                                 </svg>
                             </span>
                             <span>Notre responsabilité d'entreprise</span>
-                            <p>2.3Mo</p>
-                            <span class="checked">
+                            <p data-size="2300">2.3Mo</p>
+                            <span class="globalState unchecked">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -299,12 +448,57 @@
                                <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
                                 d="M20.046,2.435 L10.154,12.328 L10.156,12.330 L8.025,14.458 L0.954,7.385 L3.085,5.258 L8.034,10.208 L17.936,0.304 L20.046,2.435 Z"/>
                                </svg>
+                               <svg class="extend" width="14px" height="4px">
+                                  <path fill-rule="evenodd"  opacity="0.349" fill="rgb(231, 150, 85)"
+                                 d="M0.000,0.928 L14.000,0.928 L14.000,3.928 L0.000,3.928 L0.000,0.928 Z"/>
+                                </svg>
                             </span>
                         </label>
+                        <ul class="subMenu">
+                            <li>
+                                <input id="assurance" type="checkbox" hidden/>
+                                <label for="assurance">
+                                    <span>Assurance habitation</span>
+                                    <p data-size="987">987Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="test" type="checkbox" hidden/>
+                                <label for="test">
+                                    <span>Test</span>
+                                    <p data-size="176">176Ko</p>
+                                    <span class="checked">
+                                        <svg class="polygone" width="19.5px" height="23.5px">
+                                          <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                           d="M18.499,17.178 L9.511,22.438 L0.512,17.196 L0.502,6.695 L9.490,1.435 L18.489,6.677 L18.499,17.178 Z"/>
+                                        </svg>
+                                        <svg class="smallCross" width="10px" height="7px">
+                                            <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                                        d="M9.046,1.500 L5.154,5.393 L5.156,5.395 L4.025,6.523 L0.954,3.451 L2.085,2.323 L4.034,4.273 L7.936,0.369 L9.046,1.500 Z"/>
+                                        </svg>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 
-                <input class="button_link" type="button" name="" value="Télécharger 6.2Mo">
+                <div class="text-right">
+                    <input class="button_link" type="button" name="" value="Télécharger">
+                </div>
+
+                <h2>Publication complètes</h2>
+                <div class="lineSeparator"></div>
             </section>
         </div>
 

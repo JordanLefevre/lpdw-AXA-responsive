@@ -2,6 +2,10 @@
   background-color: #F8F8F8;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .doc_content {
   width: 680px;
   max-width: 100%;
@@ -12,6 +16,10 @@
   font-size: 40px;
   margin-top: 0;
   padding-top: 20px;
+}
+
+h2 {
+    font-size: 18px;
 }
 
 .lineSeparator {
@@ -55,18 +63,9 @@
   transition: all .2s;
 }
 
-.each_doc > label > .checked svg path {
-  opacity: .6;
+.each_doc > label > .checked svg path, .globalState svg path {
+  opacity: .4;
 }
-
-#cahier:checked + label span:last-child .cross,
-#groupe:checked + label span:last-child .cross,
-#strategie:checked + label span:last-child .cross,
-#activite:checked + label span:last-child .cross,
-#responsabilite:checked + label span:last-child .cross {
-  visibility: visible;
-}
-
 
 .checkbox:checked + label span:first-child .arrow {
   transform: rotate(90deg);
@@ -123,7 +122,7 @@
   visibility: visible;
 }
 
-.checked {
+.checked, .globalState {
   position: relative;
 }
 
