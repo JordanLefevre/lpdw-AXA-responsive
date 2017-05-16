@@ -35,7 +35,7 @@
             <p class="right-text"><span class="hide-on-small">regards</span><span class="hide-on-small">sur</span>2014</p>
         </header>
 
-        <div class="bgGrey">
+        <main class="bgGrey">
             <section class="doc_content">
                 <h1>documents</h1>
 
@@ -55,8 +55,8 @@
                                 </svg>
                             </span>
                             <span>Cahier "protéger ce qui nous est essentiel"</span>
-                            <p data-size="1200">1.2Mo</p>
-                            <span class="globalState unchecked">
+                            <p data-size="0">0Mo</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -121,7 +121,7 @@
                                 </svg>
                             </span>
                             <span>Entretien avec Henri de Castries</span>
-                            <p data-size="950">950Ko</p>
+                            <p data-size="0">0Mo</p>
                             <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
@@ -238,8 +238,8 @@
                                 </svg>
                             </span>
                             <span>Notre groupe</span>
-                            <p data-size="1600">1.6Mo</p>
-                            <span class="globalState unchecked">
+                            <p data-size="0">0Mo</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -304,8 +304,8 @@
                                 </svg>
                             </span>
                             <span>Notre stratégie</span>
-                            <p data-size="2100">2.1Mo</p>
-                            <span class="globalState unchecked">
+                            <p data-size="0">0Mo</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -370,8 +370,8 @@
                                 </svg>
                             </span>
                             <span>Nos activités</span>
-                            <p data-size="3400">3.4Mo</p>
-                            <span class="globalState unchecked">
+                            <p data-size="0">0Mo</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -436,8 +436,8 @@
                                 </svg>
                             </span>
                             <span>Notre responsabilité d'entreprise</span>
-                            <p data-size="2300">2.3Mo</p>
-                            <span class="globalState unchecked">
+                            <p data-size="0">0Mo</p>
+                            <span class="globalState unchecked" onclick="selectAll(event)">
                                 <svg
                                  width="33px" height="40px">
                                 <path fill-rule="evenodd"  stroke="rgb(231, 150, 85)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
@@ -499,8 +499,99 @@
 
                 <h2>Publication complètes</h2>
                 <div class="lineSeparator"></div>
+
+                <div class="allPublications">
+                    <div class="eachPubli">
+                        <img src="assets/images/doc-image.png" alt="">
+                        <div>
+                            <h2 class="titleColor">Télécharger<br /> le rapport d'activité</h2>
+                            <p>17.6Mo</p>
+                            <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                        </div>
+                    </div>
+                    <div class="eachPubli">
+                        <img src="assets/images/doc-image.png" alt="">
+                        <div>
+                            <h2 class="titleColor">Télécharger<br /> le document de référence</h2>
+                            <p>24.9Mo</p>
+                            <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Autres documents</h2>
+                <div class="lineSeparator"></div>
+
+                <ul class="download_list">
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+
+                            <span>Longévité, cahier d'AXA n°1</span>
+                            <p data-size="0">703Ko</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+
+                            <span>Retraite, cahier d'AXA n°2</span>
+                            <p data-size="0">2.3Mo</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+
+                            <span>Dépendance, cahier d'AXA n°3</span>
+                            <p data-size="0">1.3Mo</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+
+                            <span>Risques climatiques, cahier d'AXA n°4</span>
+                            <p data-size="0">1.7Mo</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+                            <span>Rejoignez le Cercle des actionnaires AXA</span>
+                            <p data-size="0">2.7Mo</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="each_doc">
+                        <input type="checkbox" class="checkbox" hidden/>
+                        <label>
+
+                            <span>Devenez actionnaire au nominatif par AXA</span>
+                            <p data-size="0">2.5Mo</p>
+                            <span class="globalState unchecked">
+                                <button class="buttonStyle"><img src="assets/images/download.jpg" alt="download"></button>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+
             </section>
-        </div>
+        </main>
 
     <script src="assets/js/script.js" charset="utf-8"></script>
 

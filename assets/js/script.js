@@ -49,6 +49,7 @@ if (subMenu) {
 
                 if(spanState.classList.contains('checked')) {
                     spanState.closest('.each_doc').querySelector('.cross').style.visibility = "visible";
+
                 } else {
                     spanState.closest('.each_doc').querySelector('.cross').style.visibility = "hidden";
                 }
